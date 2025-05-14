@@ -1,6 +1,18 @@
 function getAllButLastElementOfProperty(obj, key) {
     // your code here
-    
+        // your code here
+                  if (!obj[key] || !Array.isArray(obj[key]) || obj[key].length == 0) {
+        return []
+    }
+
+    let newArr = []
+
+    for (let i = 0; i < obj[key].length - 1; i++) {
+            newArr.push(obj[key][i])
+
+    }
+
+    return newArr
 }
 
 let obj = {
