@@ -19,6 +19,18 @@ let currentInventory = [
 
 function renderInventory(inventory) {
     // your code here
+  let result = [];
+
+  for (let designer of inventory) {
+    let designerName = designer.name;
+
+    for (let shoe of designer.shoes) {
+      result.push([designerName, shoe.name, shoe.price]);
+    }
+  }
+
+  return result;
+
     // hint: before you just dive into coding...
     // it's a good idea to sketch out a skeleton like you've been seeing earlier in this module...
     
